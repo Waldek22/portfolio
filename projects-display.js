@@ -7,7 +7,10 @@ var mainContainer = $('#left-container'),
 		urlimg: 'img/mebleFurni1.jpg',
 		title: 'Pierwsza strona zrobiona na bootcampie',
 		siteDescriptionText: 'Strona Meble Furni jest responsywną stroną stworzoną na kursie front-endu od Kodilli. Jest to pierwsza wykonana przeze mnie strona. Prosta jednostronicowa wizytówka może służyć jako strona informacyjna dla firmy sprzedającej meble. Została stworzona w celu przećwiczenia tworzenia stron opartych na gridzie.',
-		list: ['Html, CSS', 'Sass', 'Responsive web design', 'Oparta na gridzie']
+		list: ['Html, CSS', 'Sass', 'Responsive web design', 'Oparta na gridzie'],
+		ghButton: true,
+		ghButtonUrl: 'https://github.com/Waldek22/MebleFurni',
+		liveButtonUrl: 'https://waldek22.github.io/MebleFurni/'
 		},
 		secondBootcampSite: {
 			pageName: 'secondBootcampSite',
@@ -15,7 +18,10 @@ var mainContainer = $('#left-container'),
 			urlimg: 'img/bootstrap1.jpg',
 			title: 'Strona zaprojektowana i zakodowana przeze mnie',
 			siteDescriptionText: 'Kolejna prosta stronka stworzona na bootcampie. Stworznie jej miało na celu przećwiczenie posługiwania się bootstrapem.',
-			list: ['Html, CSS', 'Bootstrap', 'Responsive web design', 'Oparta na gridzie']
+			list: ['Html, CSS', 'Bootstrap', 'Responsive web design', 'Oparta na gridzie'],
+			ghButton: true,
+			ghButtonUrl: 'https://github.com/Waldek22/bootcampSite',
+			liveButtonUrl: 'https://waldek22.github.io/bootcampSite/'
 		},
 		mobilStarSite: {
 			pageName: 'mobilStarSite',
@@ -23,7 +29,10 @@ var mainContainer = $('#left-container'),
 			urlimg: 'img/mobilstar1.jpg',
 			title: 'Modyfikacja obecnej strony serwisu komórkowego',
 			siteDescriptionText: 'W ramach ćwiczeń zmodyfikowałem istniejącą już stronę mobilstar.pl Nowa strona jest nowoczesna i przyjazna użytkownikowi, dzięki bootstrapowi stworzenie strony razem z zaprojektowaniem jej, zajęło mniej niż parę godzin.',
-			list: ['Html, CSS', 'Bootstrap', 'Responsive web design', 'jQuery','Spełniająca najważniejsze wytyczne SEO']
+			list: ['Html, CSS', 'Bootstrap', 'Responsive web design', 'jQuery','Spełniająca najważniejsze wytyczne SEO'],
+			ghButton: true,
+			ghButtonUrl: 'https://github.com/Waldek22/MobilStar',
+			liveButtonUrl: 'https://waldek22.github.io/MobilStar/'
 		},
 		jsGame: {
 			pageName: 'jsGame',
@@ -31,7 +40,10 @@ var mainContainer = $('#left-container'),
 			urlimg: 'img/jsgame1.jpg',
 			title: 'Gra napisana w js oparta na zasadach papier kamień nożyce ',
 			siteDescriptionText: "Kod gry został stworzony w ramach ćwiczeń tworzenia aplikacji w javaScript na bootcampie. Cały design został zaprojektowany i wdrożony przeze mnie. Gra jest również stworzona w oparciu o  bootstrap'a, który znacznie przyspieszył proces tworzenia.",
-			list: ['Html, CSS', "Bootstrap", 'Responsive web design', 'javaScript','jQuery', 'Interaktywna aplikacja']
+			list: ['Html, CSS', "Bootstrap", 'Responsive web design', 'javaScript','jQuery', 'Interaktywna aplikacja'],
+			ghButton: true,
+			ghButtonUrl: 'https://github.com/Waldek22/jsgame',
+			liveButtonUrl: 'https://waldek22.github.io/jsgame/'
 		},
 		kanban: {
 			pageName: 'kanban',
@@ -39,7 +51,10 @@ var mainContainer = $('#left-container'),
 			urlimg: 'img/kanban3.jpg',
 			title: 'Tablica kanban stworzona w javascript i jQuery',
 			siteDescriptionText: 'Aplikacja również stworzona na bootcampie. Kod został stoworzny w ramach ćwiczeń i następnie zedytowany pod moje potrzeby, nastomiast cały design został zaprojektowany przeze mnie. Aplikacja pozwala w łatwy sposób zarządzać bierzącymi zadaniami.',
-			list: ['Html, CSS', "Grid Bootstrap'a", 'Responsive web design', 'jQuery','Interaktywna aplikacja']
+			list: ['Html, CSS', "Grid Bootstrap'a", 'Responsive web design', 'jQuery','Interaktywna aplikacja'],
+			ghButton: true,
+			ghButtonUrl: 'https://github.com/Waldek22/kanban',
+			liveButtonUrl: 'https://waldek22.github.io/kanban/'
 		},
 		hunting: {
 			pageName: 'hunting',
@@ -47,7 +62,8 @@ var mainContainer = $('#left-container'),
 			urlimg: 'img/hunting1.jpg',
 			title: "Strona postawiona na worpdress'ie, pozycjownowana w google",
 			siteDescriptionText: "Strona stworzona na wordpress'ie oparta o motyw Sahifa. Została założona 6 miesięcy temu, obecnie zyskuje naturalne backlinki, lecz w najbliższym czasie mam zamiar ją wypozycjonowac dzięki tworzeniu własnych backlinków.",
-			list: ['Html, CSS', "Wordpress", 'Responsive web design', 'SEO','Amazon affiliate']
+			list: ['Html, CSS', "Wordpress", 'Responsive web design', 'SEO','Amazon affiliate'],
+			liveButtonUrl: 'http://huntingnsurvival.com/'
 		}
 	};
 function showInfo(site) {
@@ -55,8 +71,8 @@ function showInfo(site) {
 
 	$('body').attr('id', site.pageName);
 	var portfolioGallery = $('<div>', {"class": "row portfolio-gallery"}),
-		portfolioGalleryFirstColumn = $('<div>', {"class": "col-md-3 gallery-list"}),
-		portfolioGallerySecondColumn = $('<div>', {"class": "col-lg-9 col-md-9 gallery-img"}),
+		portfolioGalleryFirstColumn = $('<div>', {"class": "col-md-3 col-xs-3 gallery-list"}),
+		portfolioGallerySecondColumn = $('<div>', {"class": "col-md-9 col-xs-9 gallery-img"}),
 		
 		mainPortfolioImage = $('<img>', {"class": "img-responsive", "id": "main-image", "src": site.urlimg}),
 		
@@ -65,16 +81,19 @@ function showInfo(site) {
 		fourthRow = $('<div>', {"class": "row"}),
 		
 		col12 = $('<div>', {"class": "col-md-12"}),
-		col6 = $('<div>', {"class": "col-md-6"}),
-		col62 = $('<div>', {"class": "col-md-6"}),
+		col6 = $('<div>', {"class": "col-md-6 col-xs-6"}),
+		col62 = $('<div>', {"class": "col-md-6 col-xs-6"}),
+		col63 = $('<div>', {"class": "col-md-6 col-sm-6"}),
+		col3 = $('<div>', {"class": "col-md-3 col-sm-3"}),
+		col31 = $('<div>', {"class": "col-md-3 col-sm-3"}),
 		
 		siteTitle = $('<h2>').text(site.title),
 		siteDescription = $('<p>').text(site.siteDescriptionText),
 		siteDescriptionList = $('<ul>'),
 		
 		buttonHomePage = $('<button>', {'class': 'portfolio-button', 'id': 'button-home-page', "onClick": 'window.location="../portfolio/#/portfolio-img-1"'}).text('Powrót do Strony głównej'),
-		buttonGithub = $('<button>', {'class': 'portfolio-button', 'id': 'button-github'}).text('Github'),
-		buttonDemo = $('<button>', {'class': 'portfolio-button', 'id': 'button-demo'}).text('Demo');
+		buttonGithub = $('<button>', {'class': 'portfolio-button', 'id': 'button-github', "onClick": 'window.open("' + site.ghButtonUrl + '", "_blank")'}).text('Github'),
+		buttonDemo = $('<button>', {'class': 'portfolio-button', 'id': 'button-demo', "onClick": 'window.open("' + site.liveButtonUrl + '", "_blank")'}).text('Live');
 		
 	
 	portfolioGalleryFirstColumn.appendTo(portfolioGallery);
@@ -92,11 +111,20 @@ function showInfo(site) {
 	siteDescriptionList.appendTo(col62);
 	site.list.forEach(insertItemsToList);
 	fourthRow.appendTo(secondRow);
-	buttonHomePage.appendTo(fourthRow);
-	buttonGithub.appendTo(fourthRow);
-	buttonDemo.appendTo(fourthRow);
+	col63.appendTo(fourthRow);
+	buttonHomePage.appendTo(col63);
+	col3.appendTo(fourthRow);
+	col31.appendTo(fourthRow);
+	showGitButton(site.ghButton);
+	buttonDemo.appendTo(col31);
 	document.location = 'projects.html#' + site.pageName;	
 	
+	function showGitButton(ghButton) {
+		if(ghButton === true){
+			buttonGithub.appendTo(col3);
+		}
+	};
+
 	function insertItem(url) {
 		portfolioImage = $('<img>', {"class": "img-responsive gallery-images", "src": url, "onClick": "changeImg(this)"});
 		portfolioImage.appendTo(portfolioGalleryFirstColumn);
