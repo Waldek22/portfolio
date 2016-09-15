@@ -72,7 +72,7 @@ function showInfo(site) {
 		siteDescription = $('<p>').text(site.siteDescriptionText),
 		siteDescriptionList = $('<ul>'),
 		
-		buttonHomePage = $('<button>', {'class': 'portfolio-button', 'id': 'button-home-page', "onClick": 'window.location="/#/portfolio"'}).text('Powrót do Strony głównej'),
+		buttonHomePage = $('<button>', {'class': 'portfolio-button', 'id': 'button-home-page', "onClick": 'window.location="../portfolio/#/portfolio-img-1"'}).text('Powrót do Strony głównej'),
 		buttonGithub = $('<button>', {'class': 'portfolio-button', 'id': 'button-github'}).text('Github'),
 		buttonDemo = $('<button>', {'class': 'portfolio-button', 'id': 'button-demo'}).text('Demo');
 		
