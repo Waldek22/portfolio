@@ -1,0 +1,366 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:100,300,700';
+
+.row {
+	margin: 0;	
+}
+
+* {
+	box-sizing: border-box;	
+}
+
+body {
+	font-family: 'Roboto', sans-serif;	
+	font-weight: 100;
+	min-height: 740px;
+
+    background: url('http://blog.hostbaby.com/wp-content/uploads/2013/07/scuffedstatic_dark1400x900.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
+
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-size: 40px;
+    line-height: 1.5;
+}
+.step h1 {
+	font-weight: 300;
+    font-size: 70px;
+    line-height: 0.7em;
+}
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
+
+#welcome {
+	padding-top: 0;	
+	text-align: center;
+}
+#welcome .information {
+	margin-top: 20px;
+	border-radius: 5px;
+	color: black;
+	text-align: center;
+	background: white;	
+}
+#about-me {
+	
+}
+#about-me img {
+	float: left;	
+	margin-right: 30px;
+}
+#about-me p {
+	margin: 0;
+	margin-top: -5px;
+    font-size: 36px;
+    line-height: 1.4em;
+}
+#why {
+	text-align: center;	
+}
+#why h2, #technologies h2, #portfolio h2 {
+	font-size: 130px;
+	text-transform: uppercase;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+#bootcamp-img {
+	width: 600px;	
+}
+#technologies h2 {
+	text-align: center;
+	font-size: 81px;
+	text-transform: uppercase;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+.technologies-img h3{
+	font-size: 70px;
+	font-weight: 300;
+	margin: 0;
+}
+.technologies-img img{
+	max-width: 30%;
+	
+}
+.portfolio-img-box {
+	width: 30%;
+	height: 250px;
+	position: relative;
+	margin-right: 15px;
+	float: left;
+}
+.portfolio-img-box:hover p {
+	color: white;
+	cursor: pointer;
+}	
+.portfolio-img-box:hover .img-background {
+	opacity: .4;	
+	cursor: pointer;
+}
+.portfolio-img-box p {
+	position: absolute;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    top: 35px;
+    color: transparent;
+    transition: .7s;
+    padding: 0 10px;
+}
+.img-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .7s;
+}
+#first-bootcamp-site {
+    background: url('../img/mebleFurni1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#second-bootcamp-site {
+    background: url('../img/bootstrap1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#mobilstar-site {
+    background: url('../img/mobilstar1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#js-game {
+    background: url('../img/jsgame1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#kanban-site {
+    background: url('../img/kanban1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#hunting-site {
+    background: url('../img/hunting1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#hunting-site-text {
+    top: 52px;
+} 
+.portfolio-img {
+	width: 1200px;	
+}
+#overview { display: none }
+
+.impress-on-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}
+/**Fallback **/
+
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border: 1px solid #E4C652;
+    border-radius: 10px;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+
+/**projects page **/
+.main-container {
+	width: 86vw;
+    height: 80vh;
+    margin: 10vh auto;
+    border: 2px solid #1a9e92;
+    border-radius: 10px;
+    font-size: 18px;
+}	
+.right-container::-webkit-scrollbar
+{
+  width: 6px;  /* for vertical scrollbars */
+}
+
+.right-container::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.right-container::-webkit-scrollbar-thumb
+{
+  background: rgba(26,158,146,0.5);
+  border-radius: 100px;
+}
+#left-container {
+	height: 90vh;
+    margin-top: 5vh;
+    border-right: 1px solid #1a9e92;
+}
+.portfolio-gallery {
+	height: 50%;
+	margin: 10px;
+	border-bottom: 1px solid #1a9e92;
+}
+.gallery-list img {
+	    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
+    overflow: auto;
+    object-fit: contain;
+	
+}	
+.gallery-list img:hover {
+    cursor: pointer;
+}
+.gallery-list, .gallery-img {
+	display: flex;
+    flex-direction: column;
+    height: 45vh;
+    justify-content: center;
+}
+.gallery-img {
+	padding: 5px 0 15px 0;	
+}
+.gallery-img img {
+	max-width: 100%;
+    height: auto;
+    overflow: auto;
+    object-fit: contain;
+}
+.portfolio-description h2 {
+	padding-bottom: 20px;
+	text-align: center;
+}
+.portfolio-description p {
+	font-size: 18px;
+    padding-right: 15px;
+    border-right: 1px solid #1a9e92;	
+}
+.portfolio-description ul {
+	list-style: none;	
+}
+.portfolio-description li:before {
+    font-family: 'FontAwesome';
+    content: '\f00c';
+    margin: 0 5px 0 -22px;
+    color: #1a9e92;
+}
+.portfolio-description li {
+	font-size: 18px;
+}
+.portfolio-button {
+	margin: 15px;
+
+    height: 80px;
+    background: transparent;
+    border: 2px solid #1a9e92;
+    border-radius: 3px;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: left;
+}
+.portfolio-button:hover {
+	background: rgba(26,158,146,0.5);
+}	
+.portfolio-button i {
+	height: 100%;
+    padding: 23px 25px 0 20px;
+    font-size: 25px;
+    border-right: 2px solid #1a9e92;
+    margin-right: 20px;	
+}
+.portfolio-button:before {
+	height: 100%;
+    display: inline-block;
+    padding: 20px 25px 0 20px;
+    font-size: 25px;
+    border-right: 2px solid #1a9e92;
+    margin-right: 20px;
+    font-family: 'FontAwesome';
+}
+#button-home-page:before {
+    content: '\f053';
+}
+#button-home-page {
+	 width: 400px;
+	 
+}
+#button-github:before {
+    content: '\f09b';
+}
+#button-github {
+	width: 200px;
+}
+#button-demo:before {
+    content: '\f108';
+}
+#button-demo {
+	width: 200px;
+}
+.right-container {
+	    height: 90vh;
+    margin-top: 5vh;
+    padding: 0 5px 0 10px;
+    overflow: auto;
+}
+.portfolio-list-item {
+	padding: 10px 0;
+    border-bottom: 1px solid #1a9e92;
+    transition: .5s;
+}
+.portfolio-list-item:last-of-type {
+	border: none;	
+}
+.portfolio-list-item:hover {
+	 background: rgba(26,158,146,0.5);	
+	 cursor: pointer;
+}
+.portfolio-list-item .col-md-6 {
+	padding: 0;	
+}
+.portfolio-list-item img {
+	width: 100%;	
+	padding-left: 5px;
+}
+.portfolio-list-item p {
+	padding-left: 10px;
+    padding-top: 32px;
+    font-size: 18px;
+}
