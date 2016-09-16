@@ -18,7 +18,11 @@ body {
     background-position: center;
     color: white;
 }
-
+a {
+    color: #2d9dff;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 
 .step {
