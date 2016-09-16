@@ -562,9 +562,13 @@
 
             return el;
         };
-
         // `prev` API function goes to previous step (in document order)
+
         var prev = function() {
+        	isMoving = true;
+			   setTimeout(function() {
+			    isMoving=false;
+			   },1000);
             var prev = steps.indexOf( activeStep ) - 1;
             prev = prev >= 0 ? steps[ prev ] : steps[ steps.length - 1 ];
 
@@ -573,12 +577,16 @@
 
         // `next` API function goes to next step (in document order)
         var next = function() {
+        	isMoving = true;
+			   setTimeout(function() {
+			    isMoving=false;
+			   },1000);
             var next = steps.indexOf( activeStep ) + 1;
             next = next < steps.length ? steps[ next ] : steps[ 0 ];
 
             return goto( next );
         };
-
+      
         // Adding some useful classes to step elements.
         //
         // All the steps that have not been shown yet are given `future` class.
@@ -670,6 +678,7 @@
 //
 // In future I think about moving it to make them optional, move to separate files
 // and treat more like a 'plugins'.
+var isMoving = false;
 ( function( document, window ) {
     "use strict";
 
@@ -748,7 +757,23 @@
                 event.preventDefault();
             }
         }, false );
+        
 
+                  $(window).bind('mousewheel DOMMouseScroll', function(event){
+			    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+			    	event.preventDefault();
+   					if (isMoving) return;
+			        console.log('up');
+			        api.prev();
+			    }
+			    else {
+			    	event.preventDefault();
+   					if (isMoving) return;
+			        console.log('down');
+			        api.next();
+			    }
+					});
+        
         // Delegated handler for clicking on the links to presentation steps
         document.addEventListener( "click", function( event ) {
 
